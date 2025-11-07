@@ -63,7 +63,7 @@ OpenWeather APIの天気データをもとに、気温・湿度・風速・降�
 個人でWeb開発と地域課題×ITのプロジェクトを進行中。  
 「生活を少しだけ便利に、少しだけ明るくする」技術をテーマに学習・発信しています。  
 - 🌐 [Wantedly](https://www.wantedly.com/id/mei_oku)  
-- 🐙 [GitHub]((https://github.com/MEI-OKU)
+- 🐙 [GitHub](https://github.com/MEI-OKU)
 
 ---
 
