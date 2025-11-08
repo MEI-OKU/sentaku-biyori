@@ -5,6 +5,9 @@
 
 ---
 
+![センタクびより画面イメージ](./screenshot.png)
+
+
 ## 🌤 概要
 
 OpenWeather API の天気データをもとに、  
