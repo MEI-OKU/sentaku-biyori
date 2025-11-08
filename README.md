@@ -58,6 +58,70 @@ OpenWeather APIの天気データをもとに、気温・湿度・風速・降�
 
 ---
 
+## 💧 乾きスコア（Dry Score）について
+
+### 🗾 Japanese
+
+本アプリでは、気象庁および民間気象サービス（ウェザーニュース、Yahoo!天気など）が提供する **「洗濯指数」** の考え方を参考に、  
+**気温・湿度・風速** の3要素をもとに洗濯物の乾きやすさを数値化しています。  
+
+これらの要素は、洗濯物の乾燥を左右する主要因（蒸発速度・対流・空気中の水分量）であり、  
+既存の「生活指数（Laundry Index）」と同じ理論的基盤を持ちます。  
+
+乾きスコアは以下の経験式（empirical model）により算出しています：
+
+> 🧮 **Dry Score = 2 × 気温 + 3 × 風速 − 0.8 × 湿度**
+
+このモデルは、気象庁の「生活指数」および WeatherNews 社「洗濯指数」で使用されている要素を参考に、  
+独自に簡易化・数値化した近似式です。  
+スコアは **0〜100** の範囲に正規化され、値が高いほど乾きやすい気象条件を示します。  
+
+| スコア | 評価 | コメント例 |
+|--------|------|-------------|
+| 80〜100 | ☀️ 絶好の洗たく日和 | カラッと乾きます |
+| 60〜79  | 😊 よく乾きそう | 午前中に干すのがおすすめ |
+| 40〜59  | 🌤 普通 | 日当たりを意識すると◎ |
+| 20〜39  | ☁️ 部屋干し推奨 | 湿気多め |
+| 0〜19   | ☔ 洗たくNG | 乾きにくい・雨注意 |
+
+---
+
+### 🌎 English
+
+This app introduces a simplified **“Dry Score”**,  
+a weather-based indicator inspired by the **Laundry Index** used by the Japan Meteorological Agency (JMA)  
+and private services such as **WeatherNews** and **Yahoo! Weather**.  
+
+The score reflects three meteorological parameters — **temperature, humidity, and wind speed** —  
+which directly influence the evaporation rate and drying efficiency of laundry.  
+
+It is calculated by the following *empirical approximation*:
+
+> 🧮 **Dry Score = 2 × Temperature + 3 × Wind Speed − 0.8 × Humidity**
+
+This model is not an arbitrary formula but an **approximation of the physics-based principles**  
+(evaporation, convection, and vapor pressure) behind existing “Laundry Index” methods.  
+The score is normalized to a 0–100 scale, where a higher value indicates better drying conditions.
+
+| Score | Evaluation | Description |
+|--------|-------------|--------------|
+| 80–100 | ☀️ Perfect | Ideal sunny weather for drying |
+| 60–79  | 😊 Good | Likely to dry well |
+| 40–59  | 🌤 Moderate | Consider sunlight exposure |
+| 20–39  | ☁️ Poor | Indoor drying recommended |
+| 0–19   | ☔ Very Poor | Rainy or humid day |
+
+---
+
+📘 *Reference:*  
+Based on the conceptual frameworks of the Japan Meteorological Agency’s “Laundry Index”  
+and WeatherNews’ “Weather-based Lifestyle Indices”, simplified and reconstructed for open data use.
+
+
+
+
+
+
 ## 🪄 作者
 **谷口 輝（Hikaru Taniguchi / MEI-OKU）**  
 個人でWeb開発と地域課題×ITのプロジェクトを進行中。  
