@@ -1,0 +1,107 @@
+/* ===== ページ全体（中央ぞろえ） ===== */
+body {
+  background: #f4f7fa;
+  font-family: "Hiragino Kaku Gothic ProN", "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== summaryブロック（中央ぞろえ） ===== */
+.summary {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  border-bottom: 2px solid #4a90e2;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 12px 20px;
+  z-index: 100;
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+.summary h2 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.summary p {
+  margin: 2px 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.summary p#summary-best {
+  font-weight: bold;
+  color: #007acc;
+}
+
+/* ===== グリッド（4×2構成） ===== */
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 16px;
+  justify-items: center;
+  max-width: 900px;
+}
+
+/* ===== 各ブロック ===== */
+.forecast-item {
+  background: #ffffff;
+  border: 1px solid #dce7f7;
+  border-radius: 12px;
+  padding: 12px;
+  width: 100%;
+  max-width: 180px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.forecast-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ===== 天気アイコン ===== */
+.weather-icon {
+  width: 80px;
+  height: 80px;
+  margin: 8px 0;
+}
+
+/* ===== テキスト ===== */
+.forecast-item h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+  color: #007acc;
+}
+
+.forecast-item p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.forecast-item strong {
+  color: #007acc;
+  font-size: 1.1rem;
+}
+
+/* ===== スマホ対応 ===== */
+@media (max-width: 800px) {
+  .forecast-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2列×4段 */
+  }
+}
+
+@media (max-width: 500px) {
+  .forecast-grid {
+    grid-template-columns: 1fr; /* 1列表示 */
+  }
+}
