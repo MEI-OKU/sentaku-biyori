@@ -1,3 +1,5 @@
+// DEMO KEY (for public GitHub Pages)
+// 本番用とは別管理
 const API_KEY = "0e7d85fae93411b2a3b0d5642fdbeb5c";
 const city = "Sapporo";
 const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&lang=ja&appid=${API_KEY}`;
@@ -62,6 +64,7 @@ function calcDryScore(temp, humidity, wind, rainProb) {
 }
 
 getForecast();
+
 
 
 
